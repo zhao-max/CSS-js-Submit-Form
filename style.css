@@ -1,0 +1,141 @@
+body{
+	background:#F2F2F2;
+}
+#bod{
+	width:950px;
+	height:400px;
+	margin:90px auto;
+}
+
+/* 两个p标签 */
+.t_r{
+	font-size:20px;
+	margin:0px;
+	text-align:center;
+	font-family:'Microsoft YaHei';
+}
+.t_x{
+	font-size:5px;
+	margin:5px;
+	text-align:center;
+	color:#A499AF;
+}
+
+/* 中间 */
+#center{
+	height:100px;
+	margin-top:30px;
+	text-align:center;
+}
+
+/* 中间标题 */
+.c_inp{
+	width:130px;
+	height:60px;
+	display:inline-block;
+	color:#A499AF;
+}
+
+/* 中间数字 */
+.cen{
+	margin:0px 30px;
+	position:relative;
+}
+/* 进度横线 */
+.c_flow{
+	width:55px;
+	height:10px;
+	border-bottom:1px solid #D7D7D7;
+	position:absolute;
+
+}
+.fl1{
+	left:-67px;
+	top:33px;
+	border-color:#3399FF;
+}
+.fl2{
+	left:-12px;
+	top:33px;
+}
+.fl3{
+	left:88px;
+	top:33px;
+}
+.fl4{
+	left:143px;
+	top:33px;
+}
+
+/* 进度数字 */
+.c_int{
+	border-radius:50%;
+	width:25px;
+	height:25px;
+	color:#FFFFFF;
+	margin:10px auto;
+}
+.int1{
+	background:#3399FF;
+}
+.int2,.int3{
+	background:#D7D7D7;
+}
+
+
+#bottom1,#bottom2,#bottom3{
+	margin-top:50px;
+	text-align:center;
+	height:100px;
+
+}
+
+.input {
+	width:250px;
+	height:30px;
+	border-radius:5px;
+    outline: 0 none;
+	border:1px ;
+    
+}
+.button{
+	background:#3399FF;
+	color:#FFFFFF;
+	border:0px;
+	border-radius:5px;
+	outline: 0 none;
+}
+.b_1{
+	width:110px;
+	height:40px;
+}
+
+
+#bottom2{
+	display:none;
+}
+.infor{
+	width:165px;
+	height:30px;
+	border-radius:5px;
+    outline: 0 none;
+	border:1px ;
+}
+.bot2{
+	width:85px;
+	height:30px;
+}
+
+
+
+
+
+#bottom3{
+	display:none;
+}
+#bottom3>p{
+	font-size:30px;
+}
+
+
+

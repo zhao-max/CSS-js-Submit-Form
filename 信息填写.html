@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>信息填写</title>
+ </head> 
+ <body>
+	<div id="bod">
+		<p class='t_r'><b>注册个人账号</b></p>
+		<p class='t_x'>为了保障您的帐户安全，请先进行安全验证</p>
+		<div id="center">
+			
+			<div class='c_inp'>输入信息
+				<div class="c_int int1">1</div>
+			</div>
+			<div class="c_inp cen">绑定手机号
+				<div class="c_int int2">2</div>
+				<div class='c_flow fl1'></div>
+				<div class='c_flow fl2 '></div>
+				<div class='c_flow fl3 '></div>
+				<div class='c_flow fl4 '></div>
+			</div>
+			<div class="c_inp">完成
+				<div class="c_int int3">3</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- 下边按钮 -->
+		<div id="bottom1">
+			<p>输入昵称：<input type="text" id='name' class='input'  placeholder="请输入昵称"></p>
+			
+			<input type="button" value="下一步" onclick="fun1()" class='button b_1'>
+		</div>
+		<div id="bottom2">
+			<p>输入手机号：<input type="text" id='iphone' class='input' autocomplete="off" placeholder="请输入手机号"></p>
+			<p>输入验证码：<input type="text" id='infor' class='infor' >
+					   <input type="button" id='fa' class='button bot2 ' value='获取验证码' onclick="huoqu()" >
+			</p>
+			
+			<input type="button" value="下一步" onclick="fun2()" class='button b_1'>
+		</div>
+		<div id="bottom3">
+			<p >绑定成功</p>
+			<input type="button" value="完成" onclick="fun3()" class='button b_1 '>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		var bottom1 = document.getElementById('bottom1');
+		var bottom2 = document.getElementById('bottom2');
+		function fun1(){
+			var name = document.getElementById('name').value;
+			if (name){
+				var int2 = document.getElementsByClassName('int2')[0];
+				var fl2 = document.getElementsByClassName('fl2')[0];
+				var fl3 = document.getElementsByClassName('fl3')[0];
+				bottom1.style.display = 'none';
+				bottom2.style.display = 'block';
+				int2.style.background='#3399FF';
+				fl2.style.borderBottom=' 1px solid #3399FF';
+				fl3.style.borderBottom=' 1px solid #3399FF';
+			}else{
+				alert('请输入有效昵称')
+			}
+		}
+		function fun2(){
+			var iphone = document.getElementById('iphone').value;
+			var iphones = iphone.length;
+			if (iphones!==11){
+				alert('请输入11位有效手机号')
+							
+			}else{
+				var int3 = document.getElementsByClassName('int3')[0];
+				var fl4 = document.getElementsByClassName('fl4')[0];
+				int3.style.background='#3399FF';
+				fl4.style.borderBottom=' 1px solid #3399FF';
+				bottom2.style.display="none";
+				bottom3.style.display = 'block';
+			}
+		}
+		function huoqu(){
+			var fa =  document.getElementById('fa');
+			var iphone = document.getElementById('iphone').value;
+			var iphones = iphone.length;
+			if (iphones ==11)
+			{
+			var time =30;
+			var start = setInterval(function(){
+				if (time==0){
+					clearInterval(start);
+					fa.removeAttribute("disabled");
+					fa.value = '获取验证码';
+				}else{
+					fa.setAttribute("disabled", true);
+					fa.value = time+'秒';
+					time --;
+				}
+			},1000);
+		}else{
+			alert('请输入11位有效手机号')
+		}
+		}
+
+
+
+
+
+		function fun3(){
+			alert('11')
+		}
+	</script>
+ </body>
+</html>
